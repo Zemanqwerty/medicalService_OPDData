@@ -3,7 +3,7 @@ import { InjectRepository } from "@nestjs/typeorm";
 import { OpdService_MedicalCard } from "./medical-card.entity";
 import { Repository } from "typeorm";
 import { MedicalCardNoteDto } from "src/dto/MedicalCard/MedicalCardNote.dto";
-import { MedicalCardResponseDto } from "src/dto/MedicalCard/MEdicalCardResponse.dto";
+import { MedicalCardResponseDto } from "src/dto/MedicalCard/MedicalCardResponse.dto";
 
 
 @Injectable()
