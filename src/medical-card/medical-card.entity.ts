@@ -1,4 +1,4 @@
-import { Entity, Column, PrimaryGeneratedColumn, Generated, OneToMany } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, Generated, OneToMany, CreateDateColumn, UpdateDateColumn } from 'typeorm';
 
 @Entity()
 export class OpdService_MedicalCard {
@@ -34,4 +34,10 @@ export class OpdService_MedicalCard {
 
   @Column()
   user_id: number;
+
+  @CreateDateColumn()
+  created_at: Date; // Creation date
+
+  @UpdateDateColumn()
+  updated_at: Date; // Last updated date
 }

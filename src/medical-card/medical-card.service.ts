@@ -21,7 +21,14 @@ export class MedicalCardService {
     }
 
     async getNotesById(userId: number) {
-        const notes = await this.medicalCardRepository.findBy({user_id: userId})
+        const notes = await this.medicalCardRepository.find({
+                                                                where: {
+                                                                    user_id: userId
+                                                                },
+                                                                order: {
+                                                                    created_at: "DESC"
+                                                                }
+                                                            })
 
         return notes;
     }
